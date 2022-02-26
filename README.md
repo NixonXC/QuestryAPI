@@ -3,7 +3,7 @@ my first api lol and its really basic
 
 [Api Url](https://api.pixiej.xyz)
 
-100 Requests Per Minute
+<h4>100 Requests Per Minute</h4>
 
 # Imports
 
