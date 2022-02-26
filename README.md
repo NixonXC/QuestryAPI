@@ -15,6 +15,7 @@ async def question(ctx):
   url = requests.get('http://api.pixiej.xyz/')
   res = url.json()
   em = discord.Embed(title="Question", description=res['question'], color=discord.Color.blurple())
+  em.set_footer(text=f"api.pixiej.xyz {res['datetime']}")
   await ctx.respond(embed = em)
 ```
 
