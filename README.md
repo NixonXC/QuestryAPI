@@ -1,7 +1,7 @@
 # QuestryAPI
 my first api lol and its really basic
 
-# imports
+# Imports
 
 ```py
 import requests
