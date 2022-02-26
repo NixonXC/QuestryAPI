@@ -1,13 +1,13 @@
 # QuestryAPI
 my first api lol and its really basic
 
-#imports
+# imports
 
 ```py
 import requests
 import json
 ```
-Slash command example
+# Slash command example
 
 ```py
 @bot.slash_command()
