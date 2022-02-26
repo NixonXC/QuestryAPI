@@ -11,7 +11,7 @@ import json
 ```
 # Slash command examples
 
-Questions
+<h2>Questions</h2>
 
 ```py
 @bot.slash_command()
@@ -23,7 +23,7 @@ async def question(ctx):
   await ctx.respond(embed = em)
 ```
 
-Jokes
+<h2>Jokes</h2>
 
 ```py
 @bot.slash_command()
