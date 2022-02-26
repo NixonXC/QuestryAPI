@@ -3,6 +3,8 @@ my first api lol and its really basic
 
 # Imports
 
+# [Api Url](https://api.pixiej.xyz)
+
 ```py
 import requests
 import json
