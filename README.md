@@ -35,4 +35,4 @@ async def joke(ctx):
   await ctx.respond(embed = em)
 ```
 
-# there is a 90% chance I am not gonna update dis repo
+# there is 50% chance that I am not going to update this repo
