@@ -1,7 +1,9 @@
 # QuestryAPI
 my first api lol and its really basic
 
-# [Api Url](https://api.pixiej.xyz)
+[Api Url](https://api.pixiej.xyz)
+
+100 Requests Per Minute
 
 # Imports
 
