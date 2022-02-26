@@ -14,7 +14,11 @@ def home_page():
   lines = open('que.txt').read().splitlines()
   que = random.choice(lines)
   result = que[4:]
-  data_set ={'question':result, 'datetime':time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())}
+  jokes = open('jokes.txt',encoding="utf8").read().splitlines()
+  resu = random.choice(jokes)
+  facts = open('facts.txt',encoding="utf8").read().splitlines()
+  resu1 = random.choice(facts)
+  data_set ={'question':result, 'datetime':time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), 'joke': resu, 'fact': resu1}
   json_dump = json.dumps(data_set)
   return json_dump
 
