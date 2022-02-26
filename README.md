@@ -11,6 +11,22 @@ my first api lol and its really basic
 import requests
 import json
 ```
+# simple example
+
+```py
+import json
+import requests
+
+url = requests.get("https://api.pixiej.xyz/")
+result = url.json()
+a = result['question']
+b = result['datetime']
+c = result['joke']
+d = result['fact']
+data_set = 'question: ' + a, 'datetime: ' + b, 'joke: '+ c, 'fact: ' + d
+print(data_set)
+```
+
 # Slash command examples
 
 <h2>Questions</h2>
