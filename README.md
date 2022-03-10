@@ -8,13 +8,12 @@ my first api lol and its really basic
 # Imports
 
 ```py
+import aiohttp
 import requests
-import json
 ```
 # simple example
 
 ```py
-import json
 import requests
 
 url = requests.get("https://api.pixiej.xyz/")
@@ -32,36 +31,51 @@ print(data_set)
 <h2>Questions</h2>
 
 ```py
+async def get_question():
+  async with aiohttp.ClientSession() as r:
+    async with r.get("http://api.pixiej.xyz/") as content:
+      req = await content.json(content_type='text/html')
+      embed = discord.Embed(title=req["question"], colour = discord.Colour.blue())
+      embed.set_footer(text=f"api.pixiej.xyz {req['datetime']}")
+      return embed
+
 @bot.slash_command()
 async def question(ctx):
-  url = requests.get('http://api.pixiej.xyz/')
-  res = url.json()
-  em = discord.Embed(title="Question", description=res['question'], color=discord.Color.blurple())
-  em.set_footer(text=f"api.pixiej.xyz {res['datetime']}")
+  em = await get_question()
   await ctx.respond(embed = em)
 ```
 
 <h2>Jokes</h2>
 
 ```py
+async def get_joke():
+  async with aiohttp.ClientSession() as r:
+    async with r.get("http://api.pixiej.xyz/") as content:
+      req = await content.json(content_type='text/html')
+      embed = discord.Embed(title=req["joke"], colour = discord.Colour.blue())
+      embed.set_footer(text=f"api.pixiej.xyz {req['datetime']}")
+      return embed
+      
 @bot.slash_command()
 async def joke(ctx):
-  url = requests.get('http://api.pixiej.xyz/')
-  res = url.json()
-  em = discord.Embed(title="Joke", description=res['joke'], color=discord.Color.blurple())
-  em.set_footer(text=f"api.pixiej.xyz {res['datetime']}")
+  em = await get_joke()
   await ctx.respond(embed = em)
 ```
 
 <h2>Facts</h2>
 
 ```py
+async def get_fact():
+  async with aiohttp.ClientSession() as r:
+    async with r.get("http://api.pixiej.xyz/") as content:
+      req = await content.json(content_type='text/html')
+      embed = discord.Embed(title=req["fact"], colour = discord.Colour.blue())
+      embed.set_footer(text=f"api.pixiej.xyz {req['datetime']}")
+      return embed
+
 @bot.slash_command()
 async def fact(ctx):
-  url = requests.get('http://api.pixiej.xyz/')
-  res = url.json()
-  em = discord.Embed(title="Fact", description=res['fact'], color=discord.Color.blurple())
-  em.set_footer(text=f"api.pixiej.xyz {res['datetime']}")
+  em = await get_fact()
   await ctx.respond(embed = em)
 ```
 
